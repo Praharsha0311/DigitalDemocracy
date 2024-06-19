@@ -1,4 +1,4 @@
-Vote Virtually, Impact Globally!!
+**************Vote Virtually, Impact Globally!!**************
 
 Steps to execute this Project:
 1.Install and setup XAMPP server
