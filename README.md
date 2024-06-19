@@ -2,6 +2,7 @@ Vote Virtually, Impact Globally!!
 
 Steps to execute this Project:
 1.Install and setup XAMPP server
+
 2.Download or clone this project
 3.Save the folder in htdocs of Xampp folder in your C drive
 4.Takeout the files candidateslistnew.frm and candidateslistnew.ibd from this folder
