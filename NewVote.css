@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;    
+    background-color: #ffffff;
+}
+
+.NavigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.NavigationBar img {
+    height: 60px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: rgb(11, 11, 141);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.NavigationBar a:hover {
+    color: rgb(35, 166, 218);
+    text-decoration: underline;
+}
+
+.LoginButton,
+.AdminButton {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    display:none;
+}
+
+.LoginButton {
+    color: white;
+    background-color: rgb(11, 11, 141);
+    border: 1px solid rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+    transition-duration: 0.3s;
+    display:none;
+
+}
+
+.LoginButton:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: rgb(11, 11, 141);
+    display:none;
+
+}
+
+.AdminButton {
+    color: rgb(11, 11, 141);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display:none;
+
+}
+
+.VotingContainer {
+    margin-top: 100px; /* Adjust this value to fit your design */
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.box {
+    border: 1px solid #ffffff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
+}
+
+.box img {
+    width: 250px; /* Adjust image size as needed */
+    height: 250px;
+}
+
+.nominee {
+    margin-bottom: 20px;
+}
+
+.nominee-label {
+    cursor: pointer;
+}
+
+.nominee input[type="radio"] {
+    display: none;
+}
+
+.nominee input[type="radio"]:checked + .nominee-label {
+    background-color: #ffffff; 
+    border: 2px solid #007bff;
+}
+
+.NomineeName{
+    color:#007bff;
+}
+
+.SubmitButton {
+    padding: 10px 20px;
+    background-color: #0b0b8d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;   
+    color: white;
+    font-weight: bold;
+    margin-top: 0px;    
+}
+
+.SubmitButton:hover {
+    border: 1px solid #0b0b8d;
+    color: #0b0b8d;  
+    font-weight: bold;
+    background-color: #ffffff;  
+}
+
+.nominee input[type="radio"]:checked + .nominee-label {
+    background-color: #007bff;
+}
+
+.nominee input[type="radio"]:checked + .nominee-label .nomineeImage {
+    border: 2px solid #007bff;
+}
+
+.nominee input[type="radio"]:checked + .nominee-label .NomineeName {
+    color: #007bff;
+    font-weight: bold;
+}
+
