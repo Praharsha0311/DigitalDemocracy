@@ -10,9 +10,9 @@ Steps to execute this Project:
 
 4.Takeout the files candidateslistnew.frm and candidateslistnew.ibd from this folder.
 
-5.Go to mysql folder from the xampp folder.
+5.Go to mysql folder of the xampp folder.
 
-6.Create a folder with the name "onlinevotingsystem".
+6.Then there,create a folder with the name "onlinevotingsystem".
 
 7.Now save the above mentioned files here.
 
