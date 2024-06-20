@@ -17,3 +17,17 @@ Steps to execute this Project:
 7.Now save the above mentioned files here.
 
 8.Now execute and try out our project!!.
+
+****Sample Data to Login and Vote****
+
+FullName: KONDOUR PRAHARSHA
+
+VoterID : 987654321
+
+Gender : Female
+
+Age : 19
+
+FatherName : KONDOUR MADHUSUDHAN RAO
+
+Address : KORUTLA
