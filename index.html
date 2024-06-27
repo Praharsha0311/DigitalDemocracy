@@ -12,6 +12,12 @@
     <title>Digital Democracy | Online Voting System</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css">
+    <style>
+        html 
+        {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,10 +25,10 @@
         <div class="NavigationBar">
             <img src="img/logo.png" alt="LOGO">
             <div>
-                <a href="index.html">Home</a>
-                <a href="Elections.html" target="_blank">Elections</a>
-                <a href="MeetingVotes.html" target="_blank">Meeting Votes</a>
-                <a href="Services.html" target="_blank">Services</a>
+                <a href="index.html" style="text-decoration: none;">Home</a>
+                <a href="#nomineeTable" target="_self" style="text-decoration: none;">Elections</a>
+                <a href="#GuideLines" target="_self" style="text-decoration: none;">Guidelines</a>
+                <a href="Services.html" target="_self" style="text-decoration: none;">Services</a>
             </div>
             <div>
                 <button onclick="location.href='login.html'" class="LoginButton">Login</button>
@@ -31,9 +37,9 @@
         </div>
     </div>
 
-    <div class="ScrollBar">
+    <!-- <div class="ScrollBar">
         <marquee><a href="localhost/OnlineVotingSystem/Login.html"> 2024 MLA ELECTIONS are Live</a></marquee>
-    </div>
+    </div> -->
     <div class="HomeImageBar">
         <img src="img/HomeImg.png" alt="Digital Democracy" class="HomeImage">
         <div>
@@ -42,7 +48,7 @@
         </div>
     </div>
 
-    <div class="ImportanceOfVoting">
+    <div class="ImportanceOfVoting" id="HowToVote">
         <div>
             <h1 class="ImportanceTitle">Why to Vote?</h1>
             <p class="ImportanceText">
@@ -73,7 +79,7 @@
     </p>
     </div>
 
-    <div class="NomineeTable">
+    <div class="NomineeTable" id="nomineeTable">
         <h1>Lok Sabha Elections 2024</h1>
         <table border="1">
             <tr>
@@ -173,7 +179,7 @@
 
     </div>
 
-    <div class="HowToVote">
+    <div class="HowToVote" id="GuideLines">
         <h2>How to Vote</h2>
         <!-- <p>Here's a simple guide to help you navigate the voting process:</p> -->
         <ul>
