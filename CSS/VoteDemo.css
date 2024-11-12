@@ -1,0 +1,707 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+.NavigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.NavigationBar img {
+    height: 60px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: rgb(11, 11, 141);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.NavigationBar a:hover {
+    color: rgb(35, 166, 218);
+    text-decoration: underline;
+}
+
+
+.LoginButton,
+.AdminButton {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.LoginButton {
+    color: white;
+    background-color: rgb(11, 11, 141);
+    border: 1px solid rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+    transition-duration: 0.3s;
+    display: none;
+}
+
+.LoginButton:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: rgb(11, 11, 141);
+}
+
+.AdminButton {
+    color: rgb(11, 11, 141);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.VotingContainer {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
+.WelcomeText {
+    color: #0b0b8d;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: none;
+}
+
+#greetingMessage {
+    color: #0b0b8d;
+    font-size: larger;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+#voteForm {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #239eda;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 40%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #239eda;
+    color: #fff;
+}
+
+button[type="button"] {
+    margin-top: 2px;
+    padding: 10px 20px;
+    background-color: #239eda;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+}
+
+button[type="button"]:hover {
+    background-color: #0b0b8d;
+}
+
+.VoteContainer {
+    border: 2px solid #ffffff;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+}
+
+.VotingContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 100px;
+    grid-gap: 1rem;
+    margin-top:45px;
+}
+
+.box {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.box img {
+    margin-right: 10px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.box1 {
+    margin-left: 20px;
+}
+
+.box2 {
+    margin-right: 20px;
+}
+
+.NarendraModiClass {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border:none;
+    border-radius: 10px;
+    margin-top:0px;
+}
+
+.NarendraModiManifestations {
+    margin-top: 0px;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Vote {
+    margin-top: 10px;
+    border: 1px solid #0b0b8d;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    color:white;
+    font-weight: bold;
+    background-color:#0b0b8d;
+    transition: 1s;
+    margin-left:300px;
+    margin-bottom:0px;
+}
+
+.content a:hover {
+    background-color:white;
+    color:#0b0b8d;
+    font-weight:bold;
+    border-color:#0b0b8d;
+
+}
+
+.Name{
+    padding:0px;
+    margin:0px;
+    margin-left:0px;
+    font-weight: bold;
+    color:#0b0b8d;
+    align-items: center;
+    margin-bottom:0px;
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+.NavigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.NavigationBar img {
+    height: 60px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: rgb(11, 11, 141);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.NavigationBar a:hover {
+    color: rgb(35, 166, 218);
+    text-decoration: underline;
+}
+
+.LoginButton,
+.AdminButton {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.LoginButton {
+    color: white;
+    background-color: rgb(11, 11, 141);
+    border: 1px solid rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+    transition-duration: 0.3s;
+}
+
+.LoginButton:hover {
+    background-color: white;
+    color: rgb(11, 11, 141);
+}
+
+.AdminButton {
+    color: rgb(11, 11, 141);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.VotingContainer {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.WelcomeText {
+    color: #0b0b8d;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: none;
+}
+
+#greetingMessage {
+    color: #0b0b8d;
+    font-size: larger;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+#voteForm {
+    margin-top: 20px;
+}
+
+.nominee {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #239eda;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 70%;
+    justify-content: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+input[type="radio"]:checked+label {
+    background-color: #239eda;
+    color: #fff;
+}
+
+input[type="radio"]:checked+label p{
+    color:white;
+    font-weight: bold;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    background-color: #239eda;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button[type="button"]:hover {
+    background-color: #0b0b8d;
+}
+
+.VoteContainer {
+    border: 2px solid #ffffff;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-top:0px;
+    margin-top:0px;
+}
+
+.VoteContainer .nominee {
+    margin-bottom: 20px;
+}
+
+.nominee img {
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.nominee .nominee-name {
+    font-weight: bold;
+    color: #0b0b8d;
+}
+
+.nominee .nominee-manifestations {
+    color: #444;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.box {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: calc(25% - 20px);
+    border-radius: 10px;
+}
+
+.VoteContainer {
+    border: 2px solid #ffffff;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.Vote {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #239eda;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Vote:hover {
+    background-color: #0b0b8d;
+}
+
+.box {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 23px;
+    display: flex;
+    align-items: center;
+    width:50%;
+}
+
+/* .box img {
+    margin-right: 10px;
+} */
+
+.content {
+    flex-grow: 1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.box {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 23px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:45%;
+}
+
+.box img {
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Vote {
+    margin-top: 10px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #0b0b8d;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #0b0b8d;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Vote:hover {
+    background-color: #ffffff;
+    color: #0b0b8d;
+}
+
+.Name {
+    font-weight: bold;
+    color: #0b0b8d;
+    margin-bottom: 10px;
+}
+
+.box:nth-child(even) {
+    margin-left: auto;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.box {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 23px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    width: 47%; /* Adjust the width */
+}
+
+.box img {
+    margin-bottom: 10px;
+    max-width: 100%;
+    /* height: auto; */
+    border-radius: 5px;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Vote {
+    margin-top: 10px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #0b0b8d;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #0b0b8d;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Vote:hover {
+    background-color: #ffffff;
+    color: #0b0b8d;
+}
+
+.Name {
+    font-weight: bold;
+    color: #0b0b8d;
+    margin-bottom: 10px;
+}
+
+.box:nth-child(even) {
+    margin-left: auto;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.box {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    /* padding: 23px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.box img {
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0px;
+}
+
+.box + .box {
+    margin-left: 20px;
+    margin:0px;
+}
+
+.VotingContainer{
+    margin-top: 10px;
+    padding-top: 0px;
+    border:none;
+    margin:0px;
+}
+
+.VoteContainer{
+    margin-top:0px;
+    padding-top: 0px;
+    margin:0px;
+}
+
+.nominee box {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.nominee-img {
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.nominee-name {
+    font-weight: bold;
+}
+
+.nominee-manifestations {
+    flex: 1; /* Allow manifestations to take remaining space */
+}

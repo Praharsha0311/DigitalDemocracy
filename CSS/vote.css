@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+.NavigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.NavigationBar img {
+    height: 60px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: rgb(11, 11, 141);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.NavigationBar a:hover {
+    color: rgb(35, 166, 218);
+    text-decoration: underline;
+}
+
+
+.LoginButton,
+.AdminButton {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.LoginButton {
+    color: white;
+    background-color: rgb(11, 11, 141);
+    border: 1px solid rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+    transition-duration: 0.3s;
+    display: none;
+}
+
+.LoginButton:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: rgb(11, 11, 141);
+}
+
+.AdminButton {
+    color: rgb(11, 11, 141);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.VotingContainer {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
+.WelcomeText {
+    color: #0b0b8d;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: none;
+}
+
+#greetingMessage {
+    color: #0b0b8d;
+    font-size: larger;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+#voteForm {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #239eda;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 40%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #239eda;
+    color: #fff;
+}
+
+button[type="button"] {
+    margin-top: 2px;
+    padding: 10px 20px;
+    background-color: #239eda;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+}
+
+button[type="button"]:hover {
+    background-color: #0b0b8d;
+}
+
+.VoteContainer {
+    border: 2px solid #ffffff;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+}

@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+}
+
+.NavigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.NavDiv{
+    margin:0px;
+}
+
+.NavigationBar img {
+    height: 60px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: rgb(11, 11, 141);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+
+}
+
+.NavigationBar a:hover {
+    color: rgb(35, 166, 218);
+    text-decoration: underline;
+}
+
+.LoginButton,
+.AdminButton {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.LoginButton {
+    color: white;
+    background-color: rgb(11, 11, 141);
+    border: 1px solid rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+    transition-duration: 0.3s;
+    margin-right:50px;
+}
+
+.LoginButton:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+}
+
+.AdminButton {
+    color: rgb(11, 11, 141);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display:none;
+}
+
+.adminContainer{
+    margin-top:100px;
+}
+
+.AdminPanel{
+    text-align: center;
+    color: rgb(11, 11, 141);
+    padding-top: 20px;
+}
+
+.MasterPasswordContainer{
+    text-align: center;
+}
+
+.MasterPasswordContainer {
+    border: 2px solid #ffffff;
+    padding: 50px;
+    margin: 50px auto;
+    width: 40%;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.Button{
+    color: white;
+    background-color: rgb(11, 11, 141);
+    border: 1px solid rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+    transition-duration: 0.3s;
+    margin-right:50px;
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin:20px;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.Button:hover{
+    background-color: rgb(35, 166, 218);
+    border-color: rgb(35, 166, 218);
+}
+

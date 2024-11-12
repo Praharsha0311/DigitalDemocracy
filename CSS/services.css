@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+}
+
+.NavigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.NavigationBar img {
+    height: 60px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: rgb(11, 11, 141);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.NavigationBar a:hover {
+    color: rgb(35, 166, 218);
+    text-decoration: underline;
+}
+
+.LoginButton,
+.AdminButton {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.LoginButton {
+    color: white;
+    background-color: rgb(11, 11, 141);
+    border: 1px solid rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+    transition-duration: 0.5s;
+}
+
+.LoginButton:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: rgb(11, 11, 141);
+}
+
+.AdminButton {
+    color: rgb(11, 11, 141);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-box h2 {
+    color: #0066cc;
+    margin-top: 0;
+}
+
+.service-box p {
+    line-height: 1.6;
+}
+
+.service-box a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.service-box a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+.CopyrightFooter {
+    background-color: rgb(11, 11, 141);
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+}

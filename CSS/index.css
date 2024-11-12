@@ -1,0 +1,292 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+}
+
+.NavigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.NavigationBar img {
+    height: 60px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: rgb(11, 11, 141);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+
+}
+
+.NavigationBar a:hover {
+    color: rgb(35, 166, 218);
+    text-decoration: underline;
+}
+
+.LoginButton,
+.AdminButton {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.LoginButton {
+    color: white;
+    background-color: rgb(11, 11, 141);
+    border: 1px solid rgb(11, 11, 141);
+    border-color: rgb(11, 11, 141);
+    transition-duration: 0.5s;
+}
+
+.LoginButton:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: rgb(11, 11, 141);
+}
+
+.AdminButton {
+    color: rgb(11, 11, 141);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.HomeImageBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    padding-top: 85px;
+}
+
+.HomeImage {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    mix-blend-mode: darken;
+    border-radius: 24px;
+    width: 650px;
+    height: 450px;
+}
+
+.HomeInfoTitle {
+    padding-top: 30px;
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(11, 11, 141);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 52px;
+    text-align: justify;
+    /* margin-left:40px; */
+}
+
+.HomeInfoText {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: rgb(35, 166, 218);
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 40px;
+
+}
+
+
+@media (max-width: 768px) {
+    .HomeImageBar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .HomeImage {
+        margin-right: 0;
+    }
+}
+
+
+.ImportanceOfVoting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.ImportanceImage {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    mix-blend-mode: darken;
+    border-radius: 24px;
+    opacity: 0.7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.ImportanceTitle {
+    padding-top: 20px;
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(11, 11, 141);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 42px;
+    padding-bottom: 20px;
+}
+
+.ImportanceText {
+    margin-top: 0;
+    /* margin-bottom: 20px; */
+    color: rgb(35, 166, 218);
+    font-size: 17px;
+    text-align: left;
+}
+
+
+.ExtraImportanceText {
+    margin-left: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
+    color: rgb(35, 166, 218);
+    font-size: 17px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+}
+
+.NomineeTable h1 {
+    text-align: center;
+    font-size: 34px;
+    color: rgb(11, 11, 141);
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+}
+
+th,
+td {
+    padding: 6px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(35, 166, 218);
+    color: white;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+img {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+ol {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.HowToVote p{
+    font-size: 23px;
+    text-align: center;
+    padding-top:0px;
+    margin-top:0px;
+    color:rgb(11, 11, 141);
+}
+
+.HowToVote h2{
+    text-align: center;
+    font-size: 47px;
+    color: rgb(11, 11, 141);
+    padding-bottom:0px;
+    margin-bottom:0px;
+    background: linear-gradient(to right, rgb(35, 166, 218), rgb(11, 11, 141));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top:10px;
+    margin-top:10px;
+}
+
+.HowToVoteList{
+    list-style-type:disc;
+    /* padding-left:80px; */
+    font-size: 18px;
+}
+
+.coloringLists{
+    color:rgb(35, 166, 218);
+}
+
+.HowToVoteList {
+    list-style-type: disc;
+    /* padding-left: 80px; */
+    font-size: 18px;
+    color: rgb(11, 11, 141); 
+    text-align: justify;
+    padding-bottom:10px;
+}
+
+.HowToVoteList:hover {
+    color: rgb(35, 166, 218); 
+}
+
+.HowToVoteList.active {
+    font-weight: bold; 
+}
+
+.CopyrightFooter {
+    background-color: rgb(11, 11, 141);
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+a{
+    text-decoration: none;
+}
+
+#moon_id{
+    height: 2.5%;
+    width:2.5%;
+    display:flex;
+    text-align:right;
+}
