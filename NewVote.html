@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Digital Democracy | Vote</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/NewVote.css">
+    <script src="vote.js"></script>
+</head>
+
+<body>
+    <div class="NavDiv">
+        <div class="NavigationBar">
+            <img src="img/logo.png" alt="LOGO">
+            <div>
+                <a href="index.html" style="text-decoration: none;">Home</a>
+                <a href="#nomineeTable" target="_self" style="text-decoration: none;">Elections</a>
+                <a href="#GuideLines" target="_self" style="text-decoration: none;">Guidelines</a>
+                <a href="Services.html" target="_self" style="text-decoration: none;">Services</a>
+            </div>
+            <div>
+                <button onclick="location.href='login.html'" class="LoginButton">Login</button>
+                <button onclick="location.href='admin.html'" class="AdminButton">Admin</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="VotingContainer">
+        <div class="VoteContainer">
+            <form id="voteForm" action="submit_vote.php" method="POST">
+                <div class="grid-container">
+                    <div class="nominee box">
+                        <input type="radio" id="narendraModi" name="vote" value="Narendra Modi">
+                        <label for="narendraModi" class="nominee-label">
+                            <div>
+                                <img src="img/BJP.png" alt="Narendra Modi" class="nomineeImage">
+                                <p class="NomineeName" style="color:#007bff">Narendra Modi</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="nominee box">
+                        <input type="radio" id="rahulGandhi" name="vote" value="Rahul Gandhi">
+                        <label for="rahulGandhi" class="nominee-label">
+                            <div>
+                                <img src="img/congress.jpg" alt="Rahul Gandhi" class="nomineeImage">
+                                <p class="NomineeName" style="color:#007bff">Rahul Gandhi</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="nominee box">
+                        <input type="radio" id="pinarayiVijayan" name="vote" value="Pinarayi Vijayan">
+                        <label for="pinarayiVijayan" class="nominee-label">
+                            <div>
+                                <img src="img/CPI.png" alt="Pinarayi Vijayan" class="nomineeImage">
+                                <p class="NomineeName" style="color:#007bff">Pinarayi Vijayan</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="nominee box">
+                        <input type="radio" id="chandraBabuNaidu" name="vote" value="Chandrababu Naidu">
+                        <label for="chandraBabuNaidu" class="nominee-label">
+                            <div>
+                                <img src="img/TDP.png" alt="ChandraBabu Naidu" class="nomineeImage">
+                                <p class="NomineeName" style="color:#007bff">ChandraBabu Naidu</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                </div>
+                <center><button type="button" onclick="submitVote()" class="SubmitButton">Submit</button></center>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function selectNominee(nomineeId) {
+    var nominee = document.getElementById(nomineeId);
+    var box = document.getElementById(nomineeId + "Box");
+    nominee.checked = !nominee.checked;
+    box.classList.toggle("selected");
+    toggleSubmitButton(); // Call function to toggle submit button visibility
+}
+
+function toggleSubmitButton() {
+    var submitButton = document.querySelector('.SubmitButton');
+    var selectedNominees = document.querySelectorAll('.nominee input[type="radio"]:checked');
+    if (selectedNominees.length > 0) {
+        submitButton.classList.add('show');
+    } else {
+        submitButton.classList.remove('show');
+    }
+}
+
+    </script>
+
+</body>
+
+</html>

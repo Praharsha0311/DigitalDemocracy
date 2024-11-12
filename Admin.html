@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Digital Democracy | Admin</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <div class="NavDiv">
+        <div class="NavigationBar">
+            <img src="img/logo.png" alt="LOGO">
+            <div>
+                <a href="index.html" style="text-decoration: none;">Home</a>
+                <a href="index.html#nomineeTable" target="_self" style="text-decoration: none;">Elections</a>
+                <a href="index.html#GuideLines" target="_self" style="text-decoration: none;">Guidelines</a>
+                <a href="Services.html" target="_self" style="text-decoration: none;">Services</a>
+            </div>
+            <div>
+                <button onclick="location.href='login.html'" class="LoginButton">Login</button>
+                <button onclick="location.href='admin.html'" class="AdminButton">Admin</button>
+            </div>
+        </div>
+    </div>
+    <div class="adminContainer">
+        <h1 class="AdminPanel">Admin Panel</h1>
+        <form id="masterPasswordForm">
+            <div class="MasterPasswordContainer">
+                <div class="MasterPasswordContainerInner">
+                    <label for="masterPassword">Enter Master Password:</label>
+                    <input type="password" id="masterPassword" required>
+                </div>
+                <br>
+                <button type="submit" class="Button">Submit</button>
+            </div>
+        </form>
+        <div id="votingResults" style="display: none;"></div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

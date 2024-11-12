@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+<link rel="stylesheet" href="css/login.css">
+    <title>Digital Democracy | Login</title>
+</head>
+
+<body>
+    <div class="NavDiv">
+        <div class="NavigationBar">
+            <img src="img/logo.png" alt="LOGO">
+            <div>
+                <a href="index.html" style="text-decoration: none;">Home</a>
+                <a href="#nomineeTable" target="_self" style="text-decoration: none;">Elections</a>
+                <a href="#GuideLines" target="_self" style="text-decoration: none;">Guidelines</a>
+                <a href="Services.html" target="_self" style="text-decoration: none;">Services</a>
+            </div>
+            <div>
+                <button onclick="location.href='login.html'" class="LoginButton">Login</button>
+                <button onclick="location.href='admin.html'" class="AdminButton">Admin</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="form-container">
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="voterId">Voter ID:</label>
+                <input type="text" id="voterId" name="voterId" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="fatherName">Father's Name:</label>
+                <input type="text" id="fatherName" name="fatherName" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <input type="submit" value="Login" style="font-family: 'Ubuntu'; font-weight: bold;">
+        </form>
+    </div>
+</body>
+</html>
